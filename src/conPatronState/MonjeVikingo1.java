@@ -67,9 +67,6 @@ public class MonjeVikingo1 {
 		this.estado = estado;
 	}
 	
-
-
-	
 	
 	
 }

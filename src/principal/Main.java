@@ -1,11 +1,12 @@
 package principal;
 
 import conPatronState.*;
+import conCondicional.*;
 
 public class Main {
 
 	public static void main(String[] args) {///100 es la vida inicial
-		MonjeVikingo1 jugador= new MonjeVikingo1(100);
+		MonjeVikingo2 jugador= new MonjeVikingo2(100);
 		
 		System.out.println(jugador);
 
