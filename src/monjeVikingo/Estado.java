@@ -1,4 +1,4 @@
-package conPatronState;
+package monjeVikingo;
 
 public abstract class Estado {
 	private static final int dañoBase=10;

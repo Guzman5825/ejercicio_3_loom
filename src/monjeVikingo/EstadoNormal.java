@@ -1,4 +1,4 @@
-package conPatronState;
+package monjeVikingo;
 
 public class EstadoNormal extends Estado{
 

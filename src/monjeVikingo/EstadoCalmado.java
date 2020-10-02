@@ -1,4 +1,4 @@
-package conPatronState;
+package monjeVikingo;
 
 public class EstadoCalmado extends Estado{
 	private static final double defensaEstado=0,multiplicadorDaño=1;

@@ -1,4 +1,4 @@
-package conCondicional;
+package monjeVikingo;
 
 public class MonjeVikingo2 {
 	private static final int CALMADO=1,NORMAL=2,COLERICO=3,BERSERKER=4;

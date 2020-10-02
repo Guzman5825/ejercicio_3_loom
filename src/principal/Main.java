@@ -1,7 +1,6 @@
 package principal;
 
-import conPatronState.*;
-import conCondicional.*;
+import monjeVikingo.*;
 
 public class Main {
 

@@ -1,13 +1,13 @@
-package conPatronState;
+package monjeVikingo;
 
-public class EstadoBeserker extends Estado{
-	private static final double defensaEstado=0.5,multiplicadorDaño=3;
+public class EstadoColerico extends Estado{
+	private static final double defensaEstado=2,multiplicadorDaño=2;
 	
-	public EstadoBeserker(MonjeVikingo1 mv)
+	public EstadoColerico(MonjeVikingo1 mv)
 	{
 		mv.setDaño(super.getDañobase()*multiplicadorDaño);
 		mv.setDefensa(defensaEstado);
-		System.out.println("el monjeVikingo a entrado en modo Beserker");
+		System.out.println("el monjeVikingo a entrado en modo Colerico");
 	}
 
 
@@ -19,7 +19,7 @@ public class EstadoBeserker extends Estado{
 
 	@Override
 	public void recibioDaño(MonjeVikingo1 obj) {
-		///no pasa nada
+		obj.setEstado(new EstadoBeserker(obj));
 	}
 
 
@@ -30,6 +30,6 @@ public class EstadoBeserker extends Estado{
 	}
 	
 	public String GetEstado() {
-		return "Beserker";
+		return "Colerico";
 	}
 }
