@@ -1,5 +1,5 @@
 package monjeVikingo;
-
+/////////////////con el patronState
 public class MonjeVikingo1 {
 
 	private double vida, daño, defensa;

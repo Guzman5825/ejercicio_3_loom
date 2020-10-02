@@ -5,7 +5,7 @@ import monjeVikingo.*;
 public class Main {
 
 	public static void main(String[] args) {///100 es la vida inicial
-		MonjeVikingo2 jugador= new MonjeVikingo2(100);
+		MonjeVikingo2 jugador= new MonjeVikingo2(2000);
 		
 		System.out.println(jugador);
 

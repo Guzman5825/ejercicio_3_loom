@@ -1,5 +1,5 @@
 package monjeVikingo;
-
+//////////////con condicionales
 public class MonjeVikingo2 {
 	private static final int CALMADO=1,NORMAL=2,COLERICO=3,BERSERKER=4;
 	private static final double dañoBase=10;
