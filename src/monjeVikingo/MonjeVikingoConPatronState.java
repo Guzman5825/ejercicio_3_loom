@@ -1,40 +1,39 @@
 package monjeVikingo;
-/////////////////con el patronState
-public class MonjeVikingo1 {
 
-	private double vida, daño, defensa;
-	Estado estado;		///proteccion por paquete
+/////////////////con el patronState
+public class MonjeVikingoConPatronState extends MonjeVikingo{
+
 	
-	public MonjeVikingo1(double vida)		///imaginemos que este es el estado inicial
-	{
-		this.vida=vida;
-		this.estado=new EstadoNormal(this);   
+	Estado estado; /// proteccion por paquete
+
+	public MonjeVikingoConPatronState(double vida) {
+		this.vida = vida;
+		this.estado = new EstadoNormal(this);
 	}
 	
 	public void meditar() {
-		System.out.println( "el monjeVikingo ha meditado" );
+		System.out.println("el monjeVikingo ha meditado");
 		this.estado.meditar(this);
 	}
-	
-	public void recibirDaño(double dañoRecibido){
-		System.out.println( "el monjeVikingo a recibio " +dañoRecibido*defensa+" daño" );
-		this.vida-=dañoRecibido*defensa;
+
+	public void recibirDaño(double dañoRecibido) {
+		System.out.println("el monjeVikingo a recibio " + dañoRecibido * defensa + " daño");
+		this.vida -= dañoRecibido * defensa;
 		this.estado.recibioDaño(this);
 	}
-	
+
 	public void atacar() {
-		System.out.println("el monjeVikingo a generado "+daño+" daño" );
+		System.out.println("el monjeVikingo a generado " + daño + " daño");
 		this.estado.atacar(this);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "----ESTADO |HP:" + vida + ", ATQ:" + daño + ",DEF:" + defensa + ", MODO:" + estado.GetEstado() + "";
 	}
 
-	
-	///////////setter y getters
-	
+	/////////// setter y getters
+
 	public double getVida() {
 		return vida;
 	}
@@ -66,7 +65,5 @@ public class MonjeVikingo1 {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
-	
-	
-	
+
 }

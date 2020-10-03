@@ -4,7 +4,7 @@ public class EstadoNormal extends Estado{
 
 	private static final double defensaEstado=1,multiplicadorDaño=1;
 	
-	public EstadoNormal(MonjeVikingo1 mv)
+	public EstadoNormal(MonjeVikingoConPatronState mv)
 	{
 		mv.setDaño(super.getDañobase()*multiplicadorDaño);
 		mv.setDefensa(defensaEstado);
@@ -12,18 +12,18 @@ public class EstadoNormal extends Estado{
 	}
 	
 	@Override
-	public void meditar(MonjeVikingo1 obj) {
+	public void meditar(MonjeVikingoConPatronState obj) {
 		obj.setEstado(new EstadoCalmado(obj));
 	}
 
 	@Override
-	public void recibioDaño(MonjeVikingo1 obj) {
+	public void recibioDaño(MonjeVikingoConPatronState obj) {
 		obj.setEstado(new EstadoColerico(obj));
 		
 	}
 
 	@Override
-	public void atacar(MonjeVikingo1 obj) {
+	public void atacar(MonjeVikingoConPatronState obj) {
 		//no cambia de estado si ataca
 	}
 	

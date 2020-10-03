@@ -3,7 +3,7 @@ package monjeVikingo;
 public class EstadoBeserker extends Estado{
 	private static final double defensaEstado=0.5,multiplicadorDaño=3;
 	
-	public EstadoBeserker(MonjeVikingo1 mv)
+	public EstadoBeserker(MonjeVikingoConPatronState mv)
 	{
 		mv.setDaño(super.getDañobase()*multiplicadorDaño);
 		mv.setDefensa(defensaEstado);
@@ -12,19 +12,19 @@ public class EstadoBeserker extends Estado{
 
 
 	@Override
-	public void meditar(MonjeVikingo1 obj) {
+	public void meditar(MonjeVikingoConPatronState obj) {
 		obj.setEstado(new EstadoNormal(obj));
 	}
 
 
 	@Override
-	public void recibioDaño(MonjeVikingo1 obj) {
+	public void recibioDaño(MonjeVikingoConPatronState obj) {
 		///no pasa nada
 	}
 
 
 	@Override
-	public void atacar(MonjeVikingo1 obj) {
+	public void atacar(MonjeVikingoConPatronState obj) {
 		///no pasa nada
 		
 	}

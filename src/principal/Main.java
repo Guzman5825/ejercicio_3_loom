@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {///100 es la vida inicial
 		
-MonjeVikingo1 jugador= new MonjeVikingo1(100);
+MonjeVikingo jugador= new MonjeVikingoConPatronState(100);
 		
 		System.out.println(jugador);
 
@@ -48,7 +48,7 @@ MonjeVikingo1 jugador= new MonjeVikingo1(100);
 		
 		System.out.println("-------------------------");
 		
-		MonjeVikingo2 jugador2= new MonjeVikingo2(2000);
+		MonjeVikingo jugador2= new MonjeVikingoConCondicional(2000);
 		
 		System.out.println(jugador2);
 
