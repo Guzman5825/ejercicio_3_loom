@@ -4,89 +4,81 @@ import monjeVikingo.*;
 
 public class Main {
 
-	public static void main(String[] args) {///100 es la vida inicial
-		
-MonjeVikingo jugador= new MonjeVikingoConPatronState(100);
-		
+	public static void main(String[] args) {/// 100 es la vida inicial
+
+		MonjeVikingo jugador = new MonjeVikingoConPatronState(100);
+
 		System.out.println(jugador);
+		System.out.println("-------------------------");
 
 		jugador.meditar();
-		
-		System.out.println(jugador);
+		jugador.recibirDaño(10);
 
-		jugador.atacar();	///atacar tiene un daño base de 10(lo dice el enunciado)
-		
 		System.out.println(jugador);
+		System.out.println("esperado:modo calmado");
 
-		jugador.recibirDaño(5);   ///necesita ingredar la cantidad de daño
-		
-		System.out.println(jugador);
-		
-		jugador.recibirDaño(20);
-		
-		System.out.println(jugador);
+		jugador.atacar();
+		System.out.println("esperado:modo normal");
 		
 		jugador.atacar();
+		jugador.recibirDaño(10);
 		
 		System.out.println(jugador);
-		
-		jugador.recibirDaño(20);
-		
+		System.out.println("esperado:modo colerico");
+
+		jugador.atacar();
+		jugador.recibirDaño(10);
+
 		System.out.println(jugador);
+		System.out.println("esperado:modo beserker");
+
+		jugador.atacar();
+		jugador.recibirDaño(10);
 		
 		jugador.meditar();
-		
-		System.out.println(jugador);
-		
+		jugador.recibirDaño(10);
 		jugador.meditar();
-		
-		System.out.println(jugador);
-		
-		jugador.recibirDaño(1000);
-		
+
 		System.out.println(jugador);
 		
 		System.out.println("-------------------------");
-		
-		MonjeVikingo jugador2= new MonjeVikingoConCondicional(2000);
-		
-		System.out.println(jugador2);
+		System.out.println("-------------------------");
+		System.out.println("-------------------------");
 
-		jugador2.meditar();
-		
-		System.out.println(jugador2);
+		jugador = new MonjeVikingoConCondicional(100);
 
-		jugador2.atacar();	///atacar tiene un daño base de 10(lo dice el enunciado)
-		
-		System.out.println(jugador2);
+		System.out.println(jugador);
+		System.out.println("-------------------------");
 
-		jugador2.recibirDaño(5);   ///necesita ingredar la cantidad de daño
+		jugador.meditar();
+		jugador.recibirDaño(10);
+
+		System.out.println(jugador);
+		System.out.println("esperado:modo calmado");
+
+		jugador.atacar();
+		System.out.println("esperado:modo normal");
 		
-		System.out.println(jugador2);
+		jugador.atacar();
+		jugador.recibirDaño(10);
 		
-		jugador2.recibirDaño(20);
+		System.out.println(jugador);
+		System.out.println("esperado:modo colerico");
+
+		jugador.atacar();
+		jugador.recibirDaño(10);
+
+		System.out.println(jugador);
+		System.out.println("esperado:modo beserker");
+
+		jugador.atacar();
+		jugador.recibirDaño(10);
 		
-		System.out.println(jugador2);
-		
-		jugador2.atacar();
-		
-		System.out.println(jugador2);
-		
-		jugador2.recibirDaño(20);
-		
-		System.out.println(jugador2);
-		
-		jugador2.meditar();
-		
-		System.out.println(jugador2);
-		
-		jugador2.meditar();
-		
-		System.out.println(jugador2);
-		
-		jugador2.recibirDaño(1000);
-		
-		System.out.println(jugador2);
+		jugador.meditar();
+		jugador.recibirDaño(10);
+		jugador.meditar();
+
+		System.out.println(jugador);
 	}
 
 }

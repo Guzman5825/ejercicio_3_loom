@@ -1,16 +1,15 @@
 package monjeVikingo;
 
 /////////////////con el patronState
-public class MonjeVikingoConPatronState extends MonjeVikingo{
+public class MonjeVikingoConPatronState extends MonjeVikingo {
 
-	
-	Estado estado; /// proteccion por paquete
+	Estado estado; 
 
 	public MonjeVikingoConPatronState(double vida) {
 		this.vida = vida;
 		this.estado = new EstadoNormal(this);
 	}
-	
+
 	public void meditar() {
 		System.out.println("el monjeVikingo ha meditado");
 		this.estado.meditar(this);
